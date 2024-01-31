@@ -129,9 +129,9 @@ li {
 }
 
 .resume-box {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #ffffff;
     border-radius: 5px;
 }
 
@@ -143,6 +143,7 @@ li {
     text-decoration: none;
     border-radius: 3px;
     transition: background-color 0.3s ease;
+    margin-bottom: 25px;
 }
 
 .resume-button:hover {
