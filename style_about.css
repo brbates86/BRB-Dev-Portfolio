@@ -1,0 +1,83 @@
+/* styles_about.css */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    margin: 0;
+}
+
+header {
+    background-color: #ffffff;
+    color: #2980b9;
+    text-align: center;
+    padding: 20px 0;
+}
+
+hr {
+    border: 1px solid #3498db; /* Set the color of the separating line */
+    margin: 20px 0; /* Adjust the margin to control the space above and below the line */
+}
+
+/* styles.css */
+
+.project-gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project {
+    cursor: pointer;
+    text-align: center;
+    max-width: 250px; /* Set your preferred maximum width */
+}
+
+.project img {
+    max-width: 100px;
+    height: auto;
+    
+}
+
+.project p {
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+header img {
+    max-width: 500px; /* Set your preferred maximum width */
+    height: auto;
+    display: block; /* This ensures margin: auto; centers the image */
+    margin: 0 auto; /* Center the image horizontally within the container */
+
+}
+
+nav {
+    background-color: #ffffff;
+    margin-top: 20px;
+}
+
+nav a {
+    color: #2980b9;
+}
+
+nav li {
+    margin: 0 10px; /* Adjust the left and right margin */
+}
+
+section {
+    flex: 1; /* Allow the section to take the remaining space */
+    padding: 60px 0;
+}
+
+footer {
+    background-color: #ffffff;
+    color: #2980b9;
+
+}
