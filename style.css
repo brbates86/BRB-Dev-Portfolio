@@ -221,3 +221,62 @@ footer {
         margin: 30% auto;
     }
 }
+
+/* ... (previous styles remain unchanged) */
+
+/* Responsive design for the entire portfolio */
+
+/* Mobile-first approach */
+body {
+    font-size: 12px;
+}
+
+/* Adjustments for tablets */
+@media only screen and (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+
+    /* Additional styles for larger screens if needed */
+}
+
+/* Adjustments for larger screens */
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    /* Additional styles for larger screens if needed */
+}
+
+/* Styling for the navigation bar */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Styling for the project gallery */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project {
+    width: 45%;
+    margin: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .project {
+        width: 100%;
+    }
+}
