@@ -1,16 +1,16 @@
-/* Reset some default styles */
+/* Reset and basic styling */
 body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
     text-align: center;
     font-family: 'Biko_Regular';
-    margin-bottom: auto;
 }
 
 body {
-    font-family:"Biko_Regular";
+    font-family: 'Biko_Regular';
     background-color: #f8f8f8;
     color: #333;
+    font-size: 16px; /* Set a base font size for better responsiveness */
 }
 
 .container {
@@ -19,22 +19,9 @@ body {
     margin: 0 auto;
 }
 
-/* style.css */
-.image-container {
-    display: flex;
-    flex-direction: row; /* Aligns items vertically */
-    justify-content: space-evenly; /* Adjust as needed for spacing */
-    align-items: center; /* Aligns items horizontally in the center */
-}
-
-.image-container img {
-    max-width: 10px;
-    height: auto;
-}
-
+/* Header styles */
 header {
     background-color: #3498db;
-    
     text-align: center;
     padding: 20px 0;
 }
@@ -45,25 +32,17 @@ header h1 {
 
 header p {
     margin: 5px 0;
-    
 }
 
 header img {
     max-width: 100%;
     height: auto;
-    z-index: 1000;
-}
-    
-hr {
-    border: 1px solid #3498db; /* Set the color of the separating line */
-    margin: 20px 0; /* Adjust the margin to control the space above and below the line */
 }
 
+/* Navigation styles */
 nav {
     background-color: #3498db;
-    position: relative;
-    width: 100%;
-    z-index: 1000;
+    text-align: center;
 }
 
 nav ul {
@@ -79,125 +58,31 @@ nav a {
     color: #fff;
     font-weight: bold;
     padding: 10px;
-   
 }
 
 nav li {
-    margin: 0 10px; 
+    margin: 0 10px;
 }
 
+/* Section styles */
 section {
-    padding: 60px 0;
+    padding: 30px 0;
 }
 
-h2 {
-    color: #f4f0f0;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 0 10px;
+/* Project gallery styles */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .project {
-    margin-bottom: 40px;
-    cursor: pointer;
+    width: 45%;
+    margin: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.project:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
-}
-
-.project img {
-    max-width: 100%;
-    height: auto;
-    
-}
-
-.project-info {
-    margin-top: 10px;
-}
-
-/* Add this to your CSS file */
-#resume {
-    margin-top: 20px;
-}
-
-.resume-box {
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-}
-
-.resume-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
-    margin-bottom: 25px;
-}
-
-.resume-button:hover {
-    background-color: #2980b9;
-}
-
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    font-size: small;
-}
-
-@font-face {
-    font-family: 'Biko';
-    src: url('/img/Biko_Regular.otf') format('woff2'),
-    /* Add additional font formats if necessary */
-}
-
-
-/* Modal styles */
-.modal {
-    display: none;
-    position: relative;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-content {
-    position: relative;
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 600px;
-}
-
-.close {
-    position: static;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #333;
-}
-
-/* Responsive styles */
+/* Media queries for responsive design */
 @media screen and (max-width: 768px) {
     header {
         padding: 30px 0;
@@ -217,66 +102,8 @@ footer {
         margin-bottom: 5px;
     }
 
-    .modal-content {
-        margin: 30% auto;
-    }
-}
-
-/* ... (previous styles remain unchanged) */
-
-/* Responsive design for the entire portfolio */
-
-/* Mobile-first approach */
-body {
-    font-size: 12px;
-}
-
-/* Adjustments for tablets */
-@media only screen and (min-width: 600px) {
-    body {
-        font-size: 18px;
-    }
-
-    /* Additional styles for larger screens if needed */
-}
-
-/* Adjustments for larger screens */
-@media only screen and (min-width: 768px) {
-    body {
-        font-size: 20px;
-    }
-
-    /* Additional styles for larger screens if needed */
-}
-
-/* Styling for the navigation bar */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav li {
-    display: inline;
-    margin: 0 10px;
-}
-
-/* Styling for the project gallery */
-.project-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.project {
-    width: 45%;
-    margin: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Media query for smaller screens */
-@media only screen and (max-width: 600px) {
     .project {
         width: 100%;
     }
 }
+
