@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 function fadeUpProps(delay: number) {
   return {
@@ -26,15 +27,19 @@ export default function Hero() {
 
       <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-20 w-full">
         <div className="max-w-3xl">
-          {/* Eyebrow tag */}
+          {/* Logo — focal point */}
           <motion.div
-            {...fadeUpProps(0.1)}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 border border-blue-200 mb-6"
+            {...fadeUpProps(0.05)}
+            className="mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-            <span className="text-xs font-semibold tracking-widest text-blue-600 uppercase">
-              Full Stack Developer · Kansas City, MO
-            </span>
+            <Image
+              src="/img/brblogo.png"
+              alt="BRB Logo"
+              width={320}
+              height={120}
+              className="object-contain w-auto h-24 sm:h-32 lg:h-40"
+              priority
+            />
           </motion.div>
 
           {/* Main headline */}

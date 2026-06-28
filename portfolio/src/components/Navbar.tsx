@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 const navLinks = [
   { label: "About",    href: "#about" },
@@ -34,19 +33,16 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
+        {/* Identity chip */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="flex items-center"
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100 border border-blue-200 hover:bg-blue-200/60 transition-colors duration-200"
           aria-label="Back to top"
         >
-          <Image
-            src="/img/brblogo.png"
-            alt="BRB Logo"
-            width={80}
-            height={32}
-            className="object-contain h-8 w-auto"
-          />
+          <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse flex-shrink-0" />
+          <span className="text-xs font-semibold tracking-widest text-blue-600 uppercase">
+            Full Stack Developer · KC, MO
+          </span>
         </button>
 
         {/* Desktop nav */}
