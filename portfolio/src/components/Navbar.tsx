@@ -33,14 +33,14 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Identity chip */}
+        {/* Identity label */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100 border border-blue-200 hover:bg-blue-200/60 transition-colors duration-200"
+          className="inline-flex items-center gap-2 hover:opacity-70 transition-opacity duration-200"
           aria-label="Back to top"
         >
-          <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse flex-shrink-0" />
-          <span className="text-xs font-semibold tracking-widest text-blue-600 uppercase">
+          <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse flex-shrink-0" />
+          <span className="text-xs font-semibold tracking-widest text-ink-600 uppercase">
             Full Stack Developer · KC, MO
           </span>
         </button>

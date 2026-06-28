@@ -70,9 +70,9 @@ export default function Hero() {
           {...fadeUpProps(0.55)}
           className="text-base sm:text-lg text-ink-500 leading-relaxed max-w-2xl mb-10"
         >
-          I build and optimize e-commerce solutions that improve performance, usability, and growth —
-          combining web development, SEO, UX, and digital strategy to create faster, more effective
-          online experiences.
+          I help businesses build faster, more effective online experiences — combining web
+          development, SEO, UX, and e-commerce expertise to create sites that actually drive results.
+          Available for freelance projects.
         </motion.p>
 
         {/* CTAs */}
