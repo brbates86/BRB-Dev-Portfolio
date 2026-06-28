@@ -4,9 +4,18 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const skills = [
-  { category: "Frontend",  items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5 / CSS3"] },
-  { category: "Backend",   items: ["Node.js", "Express", "REST APIs", "MongoDB", "MySQL"] },
-  { category: "Tools",     items: ["Git / GitHub", "Vercel", "Heroku", "VS Code", "Figma"] },
+  {
+    category: "E-Commerce",
+    items: ["Shopify", "Shopify Plus", "NetSuite SuiteCommerce", "Liquid", "Custom Storefronts"],
+  },
+  {
+    category: "Frontend & Dev",
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "REST APIs"],
+  },
+  {
+    category: "Growth & Optimization",
+    items: ["SEO Strategy", "UX Optimization", "Performance Tuning", "Workflow Automation", "Analytics"],
+  },
 ];
 
 function fadeUpProps(delay: number) {
@@ -40,9 +49,8 @@ export default function About() {
               {...(inView ? fadeUpProps(0.1) : { initial: { opacity: 0, y: 28 } })}
               className="text-4xl font-extrabold tracking-tight text-ink-900 mb-6 leading-snug"
             >
-              Building things that{" "}
-              <span className="text-blue-500">work</span> and{" "}
-              <span className="text-orange-500">last.</span>
+              Technology that connects to{" "}
+              <span className="text-blue-500">business goals.</span>
             </motion.h2>
 
             <motion.div
@@ -50,20 +58,26 @@ export default function About() {
               className="space-y-4 text-ink-600 leading-relaxed text-base"
             >
               <p>
-                I&apos;m a former carpenter turned full-stack web developer, eager to bring a unique
-                blend of craftsmanship and technical skill to every project. My carpentry journey —
-                which started alongside my dad right after high school — specialized in rough
-                carpentry, framing the skeleton of structures from the ground up.
+                I&apos;m a full-stack developer focused on building and optimizing e-commerce
+                experiences that improve performance, usability, and growth. My work combines web
+                development, SEO, UX, and digital optimization to create faster, more effective
+                online experiences.
               </p>
               <p>
-                As my family grew, so did my ambition to build in new ways. I made the leap into
-                software development and discovered that the same principles apply: measure twice, cut
-                once. Attention to structure, clean execution, and building things that stand up under
-                pressure.
+                I work extensively with Shopify, NetSuite SuiteCommerce, frontend customization,
+                dynamic product experiences, and SEO-focused content strategies — solving problems
+                that sit at the intersection of technology and business outcomes.
               </p>
               <p>
-                Outside of code, I lead a worship team at my church, play guitar, and spend weekends
-                cheering for the Chiefs or exploring downtown Kansas City with my wife, Claire.
+                Whether it&apos;s improving site functionality, streamlining operational workflows,
+                increasing search visibility, or enhancing the customer journey — I care about
+                results that move the needle, not just code that ships.
+              </p>
+              <p>
+                Before code, I was a carpenter — framing structures from the ground up alongside my
+                dad. That same instinct for precision, structure, and building things that hold up
+                under pressure follows me into every project. Outside of work I lead worship at my
+                church, cheer for the Chiefs, and explore KC with my wife, Claire.
               </p>
             </motion.div>
 
