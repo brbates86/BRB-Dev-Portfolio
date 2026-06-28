@@ -11,10 +11,25 @@ function fadeUpProps(delay: number) {
   };
 }
 
+const techItems = [
+  "Shopify",
+  "NetSuite SuiteCommerce",
+  "React",
+  "Next.js",
+  "Node.js",
+  "SEO Strategy",
+  "UX Optimization",
+  "Tailwind CSS",
+  "TypeScript",
+  "Performance Tuning",
+];
+
 export default function Hero() {
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const doubled = [...techItems, ...techItems];
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-cream-100 text-center px-6 pt-20 pb-16">
@@ -66,56 +81,38 @@ export default function Hero() {
         {/* CTAs */}
         <motion.div
           {...fadeUpProps(0.65)}
-          className="flex flex-wrap justify-center items-center gap-4 mb-12"
+          className="flex flex-wrap justify-center items-center gap-4 mb-14"
         >
           <button
             onClick={() => scrollTo("#projects")}
-            className="px-6 py-3 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-200"
+            className="px-6 py-3 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
           >
             View My Work
           </button>
           <button
             onClick={() => scrollTo("#contact")}
-            className="px-6 py-3 border-2 border-blue-400 text-blue-600 hover:bg-blue-50 font-semibold rounded-full transition-all duration-200"
+            className="px-6 py-3 border-2 border-blue-400 text-blue-600 hover:bg-blue-50 font-semibold rounded-lg transition-all duration-200"
           >
             Get In Touch
           </button>
         </motion.div>
-
-        {/* Tech badges */}
-        <motion.div
-          {...fadeUpProps(0.75)}
-          className="flex flex-wrap justify-center gap-2"
-        >
-          {[
-            "Shopify",
-            "NetSuite SuiteCommerce",
-            "React",
-            "Next.js",
-            "Node.js",
-            "SEO",
-            "UX Optimization",
-            "Tailwind CSS",
-          ].map((tech) => (
-            <span
-              key={tech}
-              className="px-3 py-1 text-xs font-medium bg-cream-200 border border-cream-400 text-ink-600 rounded-full"
-            >
-              {tech}
-            </span>
-          ))}
-        </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Marquee ticker */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
+        {...fadeUpProps(0.8)}
+        className="absolute bottom-0 left-0 right-0 border-t border-cream-300 py-4 overflow-hidden"
       >
-        <span className="text-xs text-ink-400 uppercase tracking-widest">Scroll</span>
-        <div className="w-px h-10 bg-gradient-to-b from-ink-400 to-transparent" />
+        <div className="flex animate-marquee whitespace-nowrap">
+          {doubled.map((item, i) => (
+            <span key={i} className="inline-flex items-center gap-6 px-6">
+              <span className="text-xs font-semibold tracking-widest text-ink-400 uppercase">
+                {item}
+              </span>
+              <span className="w-1 h-1 rounded-full bg-orange-300 flex-shrink-0" />
+            </span>
+          ))}
+        </div>
       </motion.div>
     </section>
   );

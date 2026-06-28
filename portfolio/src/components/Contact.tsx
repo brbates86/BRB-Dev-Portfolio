@@ -81,7 +81,7 @@ export default function Contact() {
             {/* Location badge */}
             <motion.div
               {...(inView ? fadeUpProps(0.25) : { initial: { opacity: 0, y: 28 } })}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-cream-100 border border-cream-300 rounded-full text-sm text-ink-600 mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-cream-100 border border-cream-300 rounded-lg text-sm text-ink-600 mb-8"
             >
               <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -98,7 +98,7 @@ export default function Contact() {
                 href="https://brbates86.github.io/BRB-Digital-Resume/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm rounded-full shadow-md hover:shadow-lg transition-all duration-200"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
               >
                 View My Digital Resume
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -117,9 +117,9 @@ export default function Contact() {
                 target={link.href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noopener noreferrer"
                 {...(inView ? fadeUpProps(0.2 + i * 0.1) : { initial: { opacity: 0, y: 28 } })}
-                className="group flex items-center gap-4 p-5 bg-cream-50 border border-cream-300 rounded-2xl hover:border-blue-300 hover:bg-blue-50/30 transition-all duration-200"
+                className="group flex items-center gap-4 p-5 bg-cream-50 border border-cream-300 rounded-xl hover:border-blue-300 hover:bg-blue-50/30 transition-all duration-200"
               >
-                <div className="flex-shrink-0 w-10 h-10 bg-white border border-cream-400 rounded-xl flex items-center justify-center text-blue-500 group-hover:text-blue-600 shadow-sm">
+                <div className="flex-shrink-0 w-10 h-10 bg-white border border-cream-400 rounded-lg flex items-center justify-center text-blue-500 group-hover:text-blue-600 shadow-sm">
                   {link.icon}
                 </div>
                 <div>

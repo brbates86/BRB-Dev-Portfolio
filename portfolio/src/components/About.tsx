@@ -18,6 +18,8 @@ const skills = [
   },
 ];
 
+const num = ["01", "02", "03"];
+
 function fadeUpProps(delay: number) {
   return {
     initial:    { opacity: 0, y: 28 } as const,
@@ -89,7 +91,7 @@ export default function About() {
                 href="https://brbates86.github.io/BRB-Digital-Resume/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm rounded-full transition-colors duration-200 shadow-sm"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm rounded-lg transition-colors duration-200 shadow-sm"
               >
                 View Resume
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -99,27 +101,25 @@ export default function About() {
             </motion.div>
           </div>
 
-          {/* Skills */}
-          <div className="space-y-6">
+          {/* Skills — editorial list */}
+          <div className="divide-y divide-cream-300">
             {skills.map((group, gi) => (
               <motion.div
                 key={group.category}
                 {...(inView ? fadeUpProps(0.2 + gi * 0.1) : { initial: { opacity: 0, y: 28 } })}
-                className="bg-cream-50 border border-cream-300 rounded-2xl p-6"
+                className="py-7 first:pt-0"
               >
-                <h3 className="text-xs font-bold uppercase tracking-widest text-ink-400 mb-3">
-                  {group.category}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {group.items.map((item) => (
-                    <span
-                      key={item}
-                      className="px-3 py-1 text-sm font-medium text-ink-700 bg-white border border-cream-400 rounded-full"
-                    >
-                      {item}
-                    </span>
-                  ))}
+                <div className="flex items-baseline gap-3 mb-3">
+                  <span className="text-xs font-bold text-orange-400 tabular-nums">
+                    {num[gi]}
+                  </span>
+                  <h3 className="text-xs font-bold uppercase tracking-widest text-ink-400">
+                    {group.category}
+                  </h3>
                 </div>
+                <p className="text-base font-medium text-ink-800 leading-relaxed">
+                  {group.items.join("  ·  ")}
+                </p>
               </motion.div>
             ))}
           </div>
