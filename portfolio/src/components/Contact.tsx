@@ -90,22 +90,6 @@ export default function Contact() {
               Kansas City, MO
             </motion.div>
 
-            {/* Resume CTA */}
-            <motion.div
-              {...(inView ? fadeUpProps(0.3) : { initial: { opacity: 0, y: 28 } })}
-            >
-              <a
-                href="https://brbates86.github.io/BRB-Digital-Resume/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
-              >
-                View My Digital Resume
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-            </motion.div>
           </div>
 
           {/* Right — contact cards */}
