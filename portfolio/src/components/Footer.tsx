@@ -25,7 +25,7 @@ export default function Footer() {
               alt="BRB Logo"
               width={160}
               height={60}
-              className="object-contain h-10 w-auto brightness-0 invert opacity-70 mb-5"
+              className="object-contain h-16 w-auto brightness-0 invert opacity-70 mb-5"
             />
             <p className="text-sm text-ink-400 leading-relaxed">
               Full-stack developer specializing in e-commerce performance, Shopify,
