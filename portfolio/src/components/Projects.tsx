@@ -15,7 +15,7 @@ interface Project {
 const projects: Project[] = [
   {
     title:       "The Fount KC",
-    description: "A full production website for a Kansas City venue — clean design, event listings, and seamless content management.",
+    description: "A full production website for a Kansas City venue with clean design, event listings, and seamless content management.",
     image:       "/img/Fount tile.jpg",
     url:         "https://www.thefountkc.com",
     tags:        ["Web Design", "CMS", "Responsive"],
@@ -77,7 +77,7 @@ export default function Projects() {
           {...(inView ? fadeUpProps(0.2) : { initial: { opacity: 0, y: 28 } })}
           className="text-ink-500 text-base mb-14 max-w-lg"
         >
-          A selection of projects from the bootcamp and beyond — real-world problems, real deployed solutions.
+          A selection of projects from the bootcamp and beyond. Real-world problems, real deployed solutions.
         </motion.p>
 
         {/* Grid */}

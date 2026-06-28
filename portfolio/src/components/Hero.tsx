@@ -58,7 +58,7 @@ export default function Hero() {
           {...fadeUpProps(0.55)}
           className="text-base sm:text-lg text-ink-500 leading-relaxed max-w-2xl mb-10"
         >
-          I help businesses build faster, more effective online experiences — combining web
+          I help businesses build faster, more effective online experiences by combining web
           development, SEO, UX, and e-commerce expertise to create sites that actually drive results.
           Available for freelance projects.
         </motion.p>

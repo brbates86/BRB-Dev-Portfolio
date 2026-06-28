@@ -75,7 +75,7 @@ export default function Contact() {
             >
               I take on freelance web projects alongside my full-time work. Whether you need a new
               site built, an existing one optimized, or an e-commerce experience that actually
-              converts — let&apos;s talk about what you&apos;re trying to build.
+              converts. Let&apos;s talk about what you&apos;re trying to build.
             </motion.p>
 
             {/* Location badge */}

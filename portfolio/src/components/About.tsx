@@ -65,16 +65,16 @@ export default function About() {
               </p>
               <p>
                 I work extensively with Shopify, NetSuite SuiteCommerce, frontend customization,
-                dynamic product experiences, and SEO-focused content strategies — solving problems
+                dynamic product experiences, and SEO-focused content strategies to solve problems
                 that sit at the intersection of technology and business outcomes.
               </p>
               <p>
                 Whether it&apos;s improving site functionality, streamlining operational workflows,
-                increasing search visibility, or enhancing the customer journey — I care about
+                increasing search visibility, or enhancing the customer journey. I care about
                 results that move the needle, not just code that ships.
               </p>
               <p>
-                Before code, I was a carpenter — framing structures from the ground up alongside my
+                Before code, I was a carpenter, framing structures from the ground up alongside my
                 dad. That same instinct for precision, structure, and building things that hold up
                 under pressure follows me into every project. Outside of work I lead worship at my
                 church, cheer for the Chiefs, and explore KC with my wife, Claire.
