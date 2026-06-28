@@ -62,7 +62,7 @@ export default function Hero() {
         {/* Headline */}
         <motion.h1
           {...fadeUpProps(0.45)}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-ink-900 mb-5"
+          className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-ink-900 mb-5"
         >
           E-commerce experiences that{" "}
           <span className="text-orange-500">perform.</span>
@@ -73,7 +73,7 @@ export default function Hero() {
           {...fadeUpProps(0.55)}
           className="text-base sm:text-lg text-ink-500 leading-relaxed max-w-2xl mb-10"
         >
-          I help businesses build faster, more effective online experiences by combining web
+          Helping businesses build faster, more effective online experiences by combining web
           development, SEO, UX, and e-commerce expertise to create sites that actually drive results.
           Available for freelance projects.
         </motion.p>

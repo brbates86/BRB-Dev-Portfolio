@@ -64,7 +64,7 @@ export default function Contact() {
           <div>
             <motion.h2
               {...(inView ? fadeUpProps(0.1) : { initial: { opacity: 0, y: 28 } })}
-              className="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-900 mb-4 leading-snug"
+              className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-900 mb-4 leading-snug"
             >
               Have a project in{" "}
               <span className="text-blue-500">mind?</span>
@@ -73,9 +73,9 @@ export default function Contact() {
               {...(inView ? fadeUpProps(0.2) : { initial: { opacity: 0, y: 28 } })}
               className="text-ink-500 text-base leading-relaxed mb-8"
             >
-              I take on freelance web projects alongside my full-time work. Whether you need a new
-              site built, an existing one optimized, or an e-commerce experience that actually
-              converts. Let&apos;s talk about what you&apos;re trying to build.
+              Available for freelance web projects alongside full-time development work. Whether
+              you need a new site built, an existing one optimized, or an e-commerce experience
+              that actually converts — let&apos;s talk about what you&apos;re trying to build.
             </motion.p>
 
             {/* Location badge */}

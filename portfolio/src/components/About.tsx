@@ -49,7 +49,7 @@ export default function About() {
           <div>
             <motion.h2
               {...(inView ? fadeUpProps(0.1) : { initial: { opacity: 0, y: 28 } })}
-              className="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-900 mb-6 leading-snug"
+              className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-900 mb-6 leading-snug"
             >
               Technology that connects to{" "}
               <span className="text-blue-500">business goals.</span>
@@ -60,26 +60,25 @@ export default function About() {
               className="space-y-4 text-ink-600 leading-relaxed text-base"
             >
               <p>
-                I&apos;m a full-stack developer focused on building and optimizing e-commerce
-                experiences that improve performance, usability, and growth. My work combines web
-                development, SEO, UX, and digital optimization to create faster, more effective
-                online experiences.
+                Full-stack developer focused on building and optimizing e-commerce experiences that
+                improve performance, usability, and growth. The work combines web development, SEO,
+                UX, and digital optimization to create faster, more effective online experiences.
               </p>
               <p>
-                I work extensively with Shopify, NetSuite SuiteCommerce, frontend customization,
+                Deep experience with Shopify, NetSuite SuiteCommerce, frontend customization,
                 dynamic product experiences, and SEO-focused content strategies to solve problems
-                that sit at the intersection of technology and business outcomes.
+                at the intersection of technology and business outcomes.
               </p>
               <p>
                 Whether it&apos;s improving site functionality, streamlining operational workflows,
-                increasing search visibility, or enhancing the customer journey. I care about
+                increasing search visibility, or enhancing the customer journey — the focus is on
                 results that move the needle, not just code that ships.
               </p>
               <p>
-                Before code, I was a carpenter, framing structures from the ground up alongside my
-                dad. That same instinct for precision, structure, and building things that hold up
-                under pressure follows me into every project. Outside of work I lead worship at my
-                church, cheer for the Chiefs, and explore KC with my wife, Claire.
+                Before code: a carpenter, framing structures from the ground up. That same instinct
+                for precision and building things that hold up under pressure carries into every
+                project. Leads worship at church, cheers for the Chiefs, and explores KC with wife
+                Claire.
               </p>
             </motion.div>
 

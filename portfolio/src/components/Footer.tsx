@@ -28,9 +28,7 @@ export default function Footer() {
               className="object-contain h-20 w-auto brightness-0 invert opacity-70 mb-5"
             />
             <p className="text-sm text-ink-400 leading-relaxed">
-              Full-stack developer specializing in e-commerce performance, Shopify,
-              NetSuite SuiteCommerce, and SEO-driven digital experiences. Based in
-              Kansas City. Available for freelance projects.
+              Based in Kansas City. Available for freelance projects.
             </p>
           </div>
 

@@ -75,7 +75,7 @@ export default function Projects() {
 
         <motion.h2
           {...(inView ? fadeUpProps(0.1) : { initial: { opacity: 0, y: 28 } })}
-          className="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-900 mb-3"
+          className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-900 mb-3"
         >
           Things I&apos;ve built.
         </motion.h2>
