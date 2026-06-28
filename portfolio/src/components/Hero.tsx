@@ -44,18 +44,6 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* Divider */}
-        <motion.div
-          {...fadeUpProps(0.3)}
-          className="flex items-center gap-4 mb-8 w-full max-w-sm"
-        >
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent to-cream-400" />
-          <span className="text-xs font-bold tracking-widest text-ink-400 uppercase whitespace-nowrap">
-            Full Stack Developer · Kansas City, MO
-          </span>
-          <div className="flex-1 h-px bg-gradient-to-l from-transparent to-cream-400" />
-        </motion.div>
-
         {/* Headline */}
         <motion.h1
           {...fadeUpProps(0.45)}
