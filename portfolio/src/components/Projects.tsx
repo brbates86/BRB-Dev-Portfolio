@@ -5,12 +5,12 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 
 interface Project {
-  title:       string;
-  description: string;
-  url:         string;
-  tags:        string[];
-  logo?:       string;
-  logoBg?:     string;
+  title:        string;
+  description:  string;
+  url:          string;
+  tags:         string[];
+  logo?:        string;
+  logoBg?:      string;
   placeholder?: { bg: string; text: string; abbr: string };
 }
 
@@ -64,30 +64,6 @@ function fadeUpProps(delay: number) {
   };
 }
 
-function ProjectImage({ project }: { project: Project }) {
-  if (project.logo) {
-    return (
-      <div className={`relative w-full h-full flex items-center justify-center ${project.logoBg} p-8`}>
-        <Image
-          src={project.logo}
-          alt={project.title}
-          fill
-          sizes="(max-width: 640px) 100vw, 50vw"
-          className="object-contain p-8"
-        />
-      </div>
-    );
-  }
-  const p = project.placeholder!;
-  return (
-    <div className={`w-full h-full flex items-center justify-center bg-gradient-to-br ${p.bg}`}>
-      <span className={`text-5xl font-extrabold tracking-tight ${p.text} opacity-25 select-none`}>
-        {p.abbr}
-      </span>
-    </div>
-  );
-}
-
 export default function Projects() {
   const ref    = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
@@ -112,86 +88,68 @@ export default function Projects() {
         </motion.h2>
         <motion.p
           {...(inView ? fadeUpProps(0.2) : { initial: { opacity: 0, y: 28 } })}
-          className="text-ink-500 text-base mb-14 max-w-lg"
+          className="text-ink-500 text-base mb-12 max-w-lg"
         >
           A selection of sites and platforms built and contributed to. Real businesses, real results.
         </motion.p>
 
-        {/* Grid */}
-        <div className="space-y-6">
-          {/* First project — featured full width */}
-          {projects.slice(0, 1).map((project, i) => (
+        {/* Compact uniform grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          {projects.map((project, i) => (
             <motion.a
               key={project.title}
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              {...(inView ? fadeUpProps(0.25 + i * 0.1) : { initial: { opacity: 0, y: 28 } })}
-              className="group relative flex flex-col sm:flex-row bg-white border border-cream-300 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+              {...(inView ? fadeUpProps(0.25 + i * 0.08) : { initial: { opacity: 0, y: 28 } })}
+              className="group relative bg-white border border-cream-300 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col"
             >
-              <div className="relative sm:w-64 h-44 sm:h-auto flex-shrink-0 overflow-hidden">
-                <ProjectImage project={project} />
+              {/* Logo / placeholder area */}
+              <div className={`relative h-28 flex items-center justify-center overflow-hidden ${project.logo ? project.logoBg : ""}`}>
+                {project.logo ? (
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={project.logo}
+                      alt={project.title}
+                      fill
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                      className="object-contain p-5"
+                    />
+                  </div>
+                ) : (
+                  <div className={`absolute inset-0 bg-gradient-to-br ${project.placeholder!.bg} flex items-center justify-center`}>
+                    <span className={`text-3xl font-extrabold tracking-tight ${project.placeholder!.text} opacity-25 select-none`}>
+                      {project.placeholder!.abbr}
+                    </span>
+                  </div>
+                )}
+                {/* Hover overlay + link icon */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
-                <div className="absolute top-3 right-3 w-7 h-7 bg-white/90 rounded-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-sm">
-                  <svg className="w-3.5 h-3.5 text-ink-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <div className="absolute top-2 right-2 w-6 h-6 bg-white/90 rounded-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-sm">
+                  <svg className="w-3 h-3 text-ink-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </div>
               </div>
-              <div className="p-6 flex flex-col justify-center">
-                <h3 className="text-lg font-bold text-ink-900 mb-2 group-hover:text-blue-600 transition-colors">
+
+              {/* Title + tags */}
+              <div className="p-3 flex flex-col gap-2">
+                <h3 className="text-xs font-bold text-ink-900 group-hover:text-blue-600 transition-colors leading-snug">
                   {project.title}
                 </h3>
-                <p className="text-sm text-ink-500 leading-relaxed mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="px-2.5 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 border border-blue-100 rounded">
+                <div className="flex flex-wrap gap-1">
+                  {project.tags.slice(0, 2).map((tag) => (
+                    <span key={tag} className="px-1.5 py-0.5 text-[10px] font-medium bg-blue-50 text-blue-600 border border-blue-100 rounded">
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
+
+              {/* Bottom accent bar */}
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-500" />
             </motion.a>
           ))}
-
-          {/* Remaining — 2 column grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
-            {projects.slice(1).map((project, i) => (
-              <motion.a
-                key={project.title}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                {...(inView ? fadeUpProps(0.35 + i * 0.1) : { initial: { opacity: 0, y: 28 } })}
-                className="group relative bg-white border border-cream-300 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="relative h-40 overflow-hidden">
-                  <ProjectImage project={project} />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
-                  <div className="absolute top-3 right-3 w-7 h-7 bg-white/90 rounded-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-sm">
-                    <svg className="w-3.5 h-3.5 text-ink-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-ink-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-ink-500 leading-relaxed mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="px-2.5 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 border border-blue-100 rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-500" />
-              </motion.a>
-            ))}
-          </div>
         </div>
       </div>
     </section>
