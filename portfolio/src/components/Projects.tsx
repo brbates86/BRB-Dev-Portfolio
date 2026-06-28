@@ -21,7 +21,7 @@ const projects: Project[] = [
   },
   {
     title:       "MPLocks",
-    description: "A specialized multipoint lock e-commerce site featuring an interactive multi-step lock identifier tool that guides customers to the exact replacement part they need — reducing support volume and increasing conversions.",
+    description: "A specialized multipoint lock e-commerce site featuring an interactive multi-step lock identifier tool that guides customers to the exact replacement part they need, reducing support volume and increasing conversions.",
     url:         "https://www.mplocks.com",
     tags:        ["Shopify", "E-Commerce", "Custom UI", "SEO"],
     placeholder: { bg: "from-ink-700 to-ink-900", text: "text-white", abbr: "MPL" },
@@ -83,7 +83,7 @@ export default function Projects() {
           {...(inView ? fadeUpProps(0.2) : { initial: { opacity: 0, y: 28 } })}
           className="text-ink-500 text-base mb-14 max-w-lg"
         >
-          A selection of sites and platforms I&apos;ve built and contributed to — real businesses, real results.
+          A selection of sites and platforms built and contributed to. Real businesses, real results.
         </motion.p>
 
         {/* Grid — first card full width, rest in 2 cols */}

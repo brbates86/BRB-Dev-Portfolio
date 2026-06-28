@@ -71,7 +71,7 @@ export default function About() {
               </p>
               <p>
                 Whether it&apos;s improving site functionality, streamlining operational workflows,
-                increasing search visibility, or enhancing the customer journey — the focus is on
+                increasing search visibility, or enhancing the customer journey. The focus is on
                 results that move the needle, not just code that ships.
               </p>
               <p>

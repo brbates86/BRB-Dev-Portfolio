@@ -73,9 +73,8 @@ export default function Contact() {
               {...(inView ? fadeUpProps(0.2) : { initial: { opacity: 0, y: 28 } })}
               className="text-ink-500 text-base leading-relaxed mb-8"
             >
-              Available for freelance web projects alongside full-time development work. Whether
-              you need a new site built, an existing one optimized, or an e-commerce experience
-              that actually converts — let&apos;s talk about what you&apos;re trying to build.
+              Whether you need a new site built, an existing one optimized, or an e-commerce
+              experience that actually converts, let&apos;s talk about what you&apos;re trying to build.
             </motion.p>
 
             {/* Location badge */}
