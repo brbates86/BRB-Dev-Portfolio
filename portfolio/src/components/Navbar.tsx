@@ -40,8 +40,8 @@ export default function Navbar() {
           aria-label="Back to top"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse flex-shrink-0" />
-          <span className="text-xs font-semibold tracking-widest text-ink-600 uppercase">
-            Full Stack Developer · KC, MO
+          <span className="text-xs font-semibold tracking-wide text-ink-600 uppercase">
+            Full Stack Dev · KC, MO
           </span>
         </button>
 

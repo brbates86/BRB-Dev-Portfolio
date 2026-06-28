@@ -12,11 +12,11 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-ink-900 text-ink-400 pt-16 pb-8">
+    <footer className="bg-ink-900 text-ink-400 pt-12 md:pt-16 pb-8">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Main grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 pb-12 border-b border-ink-800">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12 pb-12 border-b border-ink-800">
 
           {/* Col 1 — Logo + tagline */}
           <div className="lg:col-span-1">
@@ -30,7 +30,7 @@ export default function Footer() {
             <p className="text-sm text-ink-400 leading-relaxed">
               Full-stack developer specializing in e-commerce performance, Shopify,
               NetSuite SuiteCommerce, and SEO-driven digital experiences. Based in
-              Kansas City — available for freelance projects.
+              Kansas City. Available for freelance projects.
             </p>
           </div>
 

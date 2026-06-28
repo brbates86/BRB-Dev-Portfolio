@@ -62,7 +62,7 @@ export default function Projects() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="projects" ref={ref} className="py-24 bg-cream-100">
+    <section id="projects" ref={ref} className="py-16 md:py-24 bg-cream-100">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section label */}
         <motion.div
@@ -75,7 +75,7 @@ export default function Projects() {
 
         <motion.h2
           {...(inView ? fadeUpProps(0.1) : { initial: { opacity: 0, y: 28 } })}
-          className="text-4xl font-extrabold tracking-tight text-ink-900 mb-3"
+          className="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-900 mb-3"
         >
           Things I&apos;ve built.
         </motion.h2>

@@ -33,7 +33,7 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="about" ref={ref} className="py-24 bg-white">
+    <section id="about" ref={ref} className="py-16 md:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section label */}
         <motion.div
@@ -44,12 +44,12 @@ export default function About() {
           <span className="text-xs font-bold tracking-widest text-orange-500 uppercase">About Me</span>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Bio */}
           <div>
             <motion.h2
               {...(inView ? fadeUpProps(0.1) : { initial: { opacity: 0, y: 28 } })}
-              className="text-4xl font-extrabold tracking-tight text-ink-900 mb-6 leading-snug"
+              className="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-900 mb-6 leading-snug"
             >
               Technology that connects to{" "}
               <span className="text-blue-500">business goals.</span>

@@ -49,7 +49,7 @@ export default function Contact() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="contact" ref={ref} className="py-24 bg-white">
+    <section id="contact" ref={ref} className="py-16 md:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           {...(inView ? fadeUpProps(0) : { initial: { opacity: 0, y: 28 } })}
@@ -59,12 +59,12 @@ export default function Contact() {
           <span className="text-xs font-bold tracking-widest text-orange-500 uppercase">Contact</span>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Left — text */}
           <div>
             <motion.h2
               {...(inView ? fadeUpProps(0.1) : { initial: { opacity: 0, y: 28 } })}
-              className="text-4xl font-extrabold tracking-tight text-ink-900 mb-4 leading-snug"
+              className="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-900 mb-4 leading-snug"
             >
               Have a project in{" "}
               <span className="text-blue-500">mind?</span>
@@ -110,7 +110,7 @@ export default function Contact() {
                   <p className="text-xs font-bold uppercase tracking-widest text-ink-400 mb-0.5">
                     {link.label}
                   </p>
-                  <p className="text-sm font-medium text-ink-700 group-hover:text-blue-600 transition-colors">
+                  <p className="text-sm font-medium text-ink-700 group-hover:text-blue-600 transition-colors break-all">
                     {link.value}
                   </p>
                 </div>
