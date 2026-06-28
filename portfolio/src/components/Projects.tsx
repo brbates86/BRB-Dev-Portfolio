@@ -2,13 +2,16 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 interface Project {
   title:       string;
   description: string;
   url:         string;
   tags:        string[];
-  placeholder: { bg: string; text: string; abbr: string };
+  logo?:       string;
+  logoBg?:     string;
+  placeholder?: { bg: string; text: string; abbr: string };
 }
 
 const projects: Project[] = [
@@ -17,21 +20,24 @@ const projects: Project[] = [
     description: "A large-scale e-commerce platform offering 100K+ door and window replacement parts, with a custom part identifier tool, expert support workflows, and a seamless customer experience built for scale.",
     url:         "https://www.allaboutdoors.com",
     tags:        ["Shopify", "E-Commerce", "SEO", "UX"],
-    placeholder: { bg: "from-blue-400 to-blue-600", text: "text-white", abbr: "AADW" },
+    logo:        "/img/logo-allaboutdoors.png",
+    logoBg:      "bg-white",
   },
   {
     title:       "MPLocks",
     description: "A specialized multipoint lock e-commerce site featuring an interactive multi-step lock identifier tool that guides customers to the exact replacement part they need, reducing support volume and increasing conversions.",
     url:         "https://www.mplocks.com",
     tags:        ["Shopify", "E-Commerce", "Custom UI", "SEO"],
-    placeholder: { bg: "from-ink-700 to-ink-900", text: "text-white", abbr: "MPL" },
+    logo:        "/img/logo-mplocks.png",
+    logoBg:      "bg-white",
   },
   {
     title:       "TruthParts",
     description: "Authorized retailer for AmesburyTruth replacement hardware, built with a parts identifier tool, educational content strategy, and an optimized storefront that serves hundreds of orders weekly.",
     url:         "https://www.truthparts.com",
     tags:        ["Shopify", "E-Commerce", "Content Strategy", "SEO"],
-    placeholder: { bg: "from-orange-400 to-orange-600", text: "text-white", abbr: "TP" },
+    logo:        "/img/logo-truthparts.png",
+    logoBg:      "bg-white",
   },
   {
     title:       "Door & Window Parts",
@@ -45,7 +51,8 @@ const projects: Project[] = [
     description: "A platform built to help door and window installation professionals create a trusted online presence, showcase their services, and connect with customers looking for qualified local installers.",
     url:         "https://www.installerbio.com",
     tags:        ["Next.js", "Platform", "UX", "SEO"],
-    placeholder: { bg: "from-cream-400 to-cream-500", text: "text-ink-800", abbr: "IB" },
+    logo:        "/img/logo-installerbio.png",
+    logoBg:      "bg-slate-100",
   },
 ];
 
@@ -55,6 +62,30 @@ function fadeUpProps(delay: number) {
     animate:    { opacity: 1, y: 0  } as const,
     transition: { duration: 0.6, delay, ease: [0.25, 0.46, 0.45, 0.94] as const },
   };
+}
+
+function ProjectImage({ project }: { project: Project }) {
+  if (project.logo) {
+    return (
+      <div className={`relative w-full h-full flex items-center justify-center ${project.logoBg} p-8`}>
+        <Image
+          src={project.logo}
+          alt={project.title}
+          fill
+          sizes="(max-width: 640px) 100vw, 50vw"
+          className="object-contain p-8"
+        />
+      </div>
+    );
+  }
+  const p = project.placeholder!;
+  return (
+    <div className={`w-full h-full flex items-center justify-center bg-gradient-to-br ${p.bg}`}>
+      <span className={`text-5xl font-extrabold tracking-tight ${p.text} opacity-25 select-none`}>
+        {p.abbr}
+      </span>
+    </div>
+  );
 }
 
 export default function Projects() {
@@ -86,7 +117,7 @@ export default function Projects() {
           A selection of sites and platforms built and contributed to. Real businesses, real results.
         </motion.p>
 
-        {/* Grid — first card full width, rest in 2 cols */}
+        {/* Grid */}
         <div className="space-y-6">
           {/* First project — featured full width */}
           {projects.slice(0, 1).map((project, i) => (
@@ -98,11 +129,8 @@ export default function Projects() {
               {...(inView ? fadeUpProps(0.25 + i * 0.1) : { initial: { opacity: 0, y: 28 } })}
               className="group relative flex flex-col sm:flex-row bg-white border border-cream-300 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              {/* Placeholder */}
-              <div className={`relative sm:w-64 h-44 sm:h-auto flex-shrink-0 bg-gradient-to-br ${project.placeholder.bg} flex items-center justify-center`}>
-                <span className={`text-4xl font-extrabold tracking-tight ${project.placeholder.text} opacity-30 select-none`}>
-                  {project.placeholder.abbr}
-                </span>
+              <div className="relative sm:w-64 h-44 sm:h-auto flex-shrink-0 overflow-hidden">
+                <ProjectImage project={project} />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
                 <div className="absolute top-3 right-3 w-7 h-7 bg-white/90 rounded-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-sm">
                   <svg className="w-3.5 h-3.5 text-ink-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -138,11 +166,8 @@ export default function Projects() {
                 {...(inView ? fadeUpProps(0.35 + i * 0.1) : { initial: { opacity: 0, y: 28 } })}
                 className="group relative bg-white border border-cream-300 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                {/* Placeholder */}
-                <div className={`relative h-40 flex items-center justify-center bg-gradient-to-br ${project.placeholder.bg}`}>
-                  <span className={`text-5xl font-extrabold tracking-tight ${project.placeholder.text} opacity-25 select-none`}>
-                    {project.placeholder.abbr}
-                  </span>
+                <div className="relative h-40 overflow-hidden">
+                  <ProjectImage project={project} />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
                   <div className="absolute top-3 right-3 w-7 h-7 bg-white/90 rounded-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-sm">
                     <svg className="w-3.5 h-3.5 text-ink-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
