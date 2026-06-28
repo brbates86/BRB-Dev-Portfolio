@@ -17,9 +17,9 @@ interface Project {
 const projects: Project[] = [
   {
     title:       "All About Doors & Windows",
-    description: "A large-scale e-commerce platform offering 100K+ door and window replacement parts, with a custom part identifier tool, expert support workflows, and a seamless customer experience built for scale.",
+    description: "A large-scale NetSuite SuiteCommerce platform offering 100K+ door and window replacement parts, with a custom part identifier tool, expert support workflows, and a seamless customer experience built for scale.",
     url:         "https://www.allaboutdoors.com",
-    tags:        ["Shopify", "E-Commerce", "SEO", "UX"],
+    tags:        ["NetSuite", "E-Commerce", "SEO", "UX"],
     logo:        "/img/logo-allaboutdoors.png",
     logoBg:      "bg-white",
   },
