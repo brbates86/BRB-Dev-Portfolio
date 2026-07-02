@@ -51,8 +51,8 @@ export default function About() {
               {...(inView ? fadeUpProps(0.1) : { initial: { opacity: 0, y: 28 } })}
               className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-900 mb-6 leading-snug"
             >
-              Technology that connects to{" "}
-              <span className="text-blue-500">business goals.</span>
+              Kansas City web developer.{" "}
+              <span className="text-blue-500">Real results.</span>
             </motion.h2>
 
             <motion.div
@@ -77,8 +77,8 @@ export default function About() {
               <p>
                 Before code: a carpenter, framing structures from the ground up. That same instinct
                 for precision and building things that hold up under pressure carries into every
-                project. Leads worship at church, cheers for the Chiefs, and explores KC with wife
-                Claire.
+                project. Based in Kansas City, MO. Leads worship at church, cheers for the Chiefs,
+                and explores the city with wife Claire.
               </p>
             </motion.div>
 

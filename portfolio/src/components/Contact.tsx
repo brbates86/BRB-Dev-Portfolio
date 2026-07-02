@@ -66,15 +66,16 @@ export default function Contact() {
               {...(inView ? fadeUpProps(0.1) : { initial: { opacity: 0, y: 28 } })}
               className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-900 mb-4 leading-snug"
             >
-              Have a project in{" "}
-              <span className="text-blue-500">mind?</span>
+              Need a website built in{" "}
+              <span className="text-blue-500">Kansas City?</span>
             </motion.h2>
             <motion.p
               {...(inView ? fadeUpProps(0.2) : { initial: { opacity: 0, y: 28 } })}
               className="text-ink-500 text-base leading-relaxed mb-8"
             >
-              Whether you need a new site built, an existing one optimized, or an e-commerce
-              experience that actually converts, let&apos;s talk about what you&apos;re trying to build.
+              Whether you need an affordable new site built, an existing one optimized, or an
+              e-commerce experience that actually converts, let&apos;s talk about what you&apos;re trying
+              to build.
             </motion.p>
 
             {/* Location badge */}

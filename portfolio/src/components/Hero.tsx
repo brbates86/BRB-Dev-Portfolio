@@ -81,9 +81,9 @@ export default function Hero() {
           {...fadeUpProps(0.55)}
           className="text-base sm:text-lg text-ink-500 leading-relaxed max-w-2xl mb-10"
         >
-          Helping businesses build faster, more effective online experiences by combining web
-          development, SEO, UX, and e-commerce expertise to create sites that actually drive results.
-          Available for freelance projects.
+          Kansas City-based web developer helping businesses build faster, more effective online
+          experiences. Combining web development, SEO, UX, and e-commerce expertise to create
+          sites that drive real results. Affordable freelance projects welcome.
         </motion.p>
 
         {/* CTAs */}
