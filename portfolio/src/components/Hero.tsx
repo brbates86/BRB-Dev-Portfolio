@@ -59,6 +59,14 @@ export default function Hero() {
           />
         </motion.div>
 
+        {/* Separator */}
+        <motion.div
+          {...fadeUpProps(0.35)}
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md mb-10"
+        >
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-cream-400 to-transparent" />
+        </motion.div>
+
         {/* Headline */}
         <motion.h1
           {...fadeUpProps(0.45)}
