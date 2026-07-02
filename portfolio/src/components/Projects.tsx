@@ -24,6 +24,14 @@ const projects: Project[] = [
     logoBg:      "bg-white",
   },
   {
+    title:       "InstallerBio",
+    description: "A platform built to help door and window installation professionals create a trusted online presence, showcase their services, and connect with customers looking for qualified local installers.",
+    url:         "https://www.installerbio.com",
+    tags:        ["Next.js", "Platform", "UX", "SEO"],
+    logo:        "/img/logo-installerbio.png",
+    logoBg:      "bg-slate-100",
+  },
+  {
     title:       "MPLocks",
     description: "A specialized multipoint lock e-commerce site featuring an interactive multi-step lock identifier tool that guides customers to the exact replacement part they need, reducing support volume and increasing conversions.",
     url:         "https://www.mplocks.com",
@@ -45,14 +53,6 @@ const projects: Project[] = [
     url:         "https://www.doorandwindowparts.com",
     tags:        ["E-Commerce", "Shopify", "UX"],
     placeholder: { bg: "from-blue-300 to-blue-500", text: "text-white", abbr: "DWP" },
-  },
-  {
-    title:       "InstallerBio",
-    description: "A platform built to help door and window installation professionals create a trusted online presence, showcase their services, and connect with customers looking for qualified local installers.",
-    url:         "https://www.installerbio.com",
-    tags:        ["Next.js", "Platform", "UX", "SEO"],
-    logo:        "/img/logo-installerbio.png",
-    logoBg:      "bg-slate-100",
   },
 ];
 
