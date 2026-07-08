@@ -32,12 +32,12 @@ export default function Hero() {
   const doubled = [...techItems, ...techItems];
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-cream-100 text-left sm:text-center px-6 pt-20 pb-24">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-cream-100 text-left sm:text-center px-6 pt-20 pb-24 w-full max-w-[100vw]">
       {/* Background blobs */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-blue-200/25 blur-3xl" />
-        <div className="absolute bottom-[-5%] left-[-5%] w-[400px] h-[400px] rounded-full bg-orange-100/35 blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-blue-100/15 blur-2xl" />
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-10%] right-[-5%] w-[280px] sm:w-[500px] h-[280px] sm:h-[500px] rounded-full bg-blue-200/25 blur-3xl" />
+        <div className="absolute bottom-[-5%] left-[-5%] w-[220px] sm:w-[400px] h-[220px] sm:h-[400px] rounded-full bg-orange-100/35 blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180px] sm:w-[300px] h-[180px] sm:h-[300px] rounded-full bg-blue-100/15 blur-2xl" />
       </div>
 
       <div className="relative w-full max-w-4xl mx-auto flex flex-col items-start sm:items-center">

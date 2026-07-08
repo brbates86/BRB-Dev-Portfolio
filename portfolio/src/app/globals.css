@@ -9,9 +9,13 @@
 
 * {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
+html,
 body {
+  overflow-x: hidden;
+  max-width: 100%;
   color: var(--foreground);
   background: var(--background);
 }
