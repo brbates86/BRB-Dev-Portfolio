@@ -94,7 +94,7 @@ export default function Projects() {
         </motion.p>
 
         {/* Mobile: swipeable snap scroll — Desktop: grid */}
-        <div className="-mx-6 px-6 sm:mx-0 sm:px-0 flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none scroll-smooth sm:grid-cols-3 lg:grid-cols-5 gap-4 pb-4 sm:pb-0">
+        <div className="-mx-6 sm:mx-0 sm:px-0 flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none scroll-smooth sm:grid-cols-3 lg:grid-cols-5 gap-4 pb-4 sm:pb-0 px-6 sm:px-0">
           {projects.map((project, i) => (
             <motion.a
               key={project.title}
@@ -102,7 +102,7 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
               {...(inView ? fadeUpProps(0.25 + i * 0.08) : { initial: { opacity: 0, y: 28 } })}
-              className="group relative bg-white border border-cream-300 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col flex-shrink-0 w-[72vw] sm:w-auto snap-start"
+              className="group relative bg-white border border-cream-300 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col flex-shrink-0 w-[78vw] sm:w-auto snap-center"
             >
               {/* Logo / placeholder area */}
               <div className={`relative h-36 sm:h-28 flex items-center justify-center overflow-hidden ${project.logo ? project.logoBg : ""}`}>
