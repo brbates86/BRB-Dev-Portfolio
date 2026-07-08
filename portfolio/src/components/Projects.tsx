@@ -93,8 +93,8 @@ export default function Projects() {
           A selection of sites and platforms built and contributed to. Real businesses, real results.
         </motion.p>
 
-        {/* Compact uniform grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        {/* Mobile: swipeable snap scroll — Desktop: grid */}
+        <div className="-mx-6 px-6 sm:mx-0 sm:px-0 flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none scroll-smooth sm:grid-cols-3 lg:grid-cols-5 gap-4 pb-4 sm:pb-0">
           {projects.map((project, i) => (
             <motion.a
               key={project.title}
@@ -102,17 +102,17 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
               {...(inView ? fadeUpProps(0.25 + i * 0.08) : { initial: { opacity: 0, y: 28 } })}
-              className="group relative bg-white border border-cream-300 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              className="group relative bg-white border border-cream-300 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col flex-shrink-0 w-[72vw] sm:w-auto snap-start"
             >
               {/* Logo / placeholder area */}
-              <div className={`relative h-28 flex items-center justify-center overflow-hidden ${project.logo ? project.logoBg : ""}`}>
+              <div className={`relative h-36 sm:h-28 flex items-center justify-center overflow-hidden ${project.logo ? project.logoBg : ""}`}>
                 {project.logo ? (
                   <div className="relative w-full h-full">
                     <Image
                       src={project.logo}
                       alt={project.title}
                       fill
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                      sizes="(max-width: 640px) 72vw, (max-width: 1024px) 33vw, 20vw"
                       className="object-contain p-5"
                     />
                   </div>
@@ -133,8 +133,8 @@ export default function Projects() {
               </div>
 
               {/* Title + tags */}
-              <div className="p-3 flex flex-col gap-2">
-                <h3 className="text-xs font-bold text-ink-900 group-hover:text-blue-600 transition-colors leading-snug">
+              <div className="p-4 sm:p-3 flex flex-col gap-2">
+                <h3 className="text-sm sm:text-xs font-bold text-ink-900 group-hover:text-blue-600 transition-colors leading-snug">
                   {project.title}
                 </h3>
                 <div className="flex flex-wrap gap-1">
