@@ -32,7 +32,7 @@ export default function Hero() {
   const doubled = [...techItems, ...techItems];
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-cream-100 text-center px-6 pt-20 pb-24">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-cream-100 text-left sm:text-center px-6 pt-20 pb-24">
       {/* Background blobs */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-blue-200/25 blur-3xl" />
@@ -40,7 +40,7 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-blue-100/15 blur-2xl" />
       </div>
 
-      <div className="relative w-full max-w-4xl mx-auto flex flex-col items-center">
+      <div className="relative w-full max-w-4xl mx-auto flex flex-col items-start sm:items-center">
 
         {/* Logo — hero centerpiece */}
         <motion.div
@@ -89,7 +89,7 @@ export default function Hero() {
         {/* CTAs */}
         <motion.div
           {...fadeUpProps(0.65)}
-          className="flex flex-col sm:flex-row justify-center items-center gap-3 mb-14 w-full sm:w-auto"
+          className="flex flex-col sm:flex-row justify-start sm:justify-center items-stretch sm:items-center gap-3 mb-14 w-full sm:w-auto"
         >
           <button
             onClick={() => scrollTo("#projects")}
